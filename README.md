@@ -28,6 +28,11 @@ npm run build
 npm run preview
 ```
 
+## Documentation
+
+- TypeScript interview Q&A + project concepts:
+  - `docs/typescript-interview-questions-and-concepts.md`
+
 ## GitHub Pages Deploy (Repo Subpath)
 
 This app uses:
