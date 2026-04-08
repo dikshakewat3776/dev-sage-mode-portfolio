@@ -33,21 +33,14 @@ export const studyEntries: StudyEntry[] = [
     id: 's5',
     subject: 'Mongo',
     contentType: 'link',
-    tags: ['Concepts'],
-    content: 'https://github.com/dikshakewat3776/Stranger-Things-Mongo-Quest/blob/main/docs/mongo-basics.md'
-  },
-  {
-    id: 's6',
-    subject: 'Mongo',
-    contentType: 'link',
     tags: ['QnA'],
     content: 'https://github.com/dikshakewat3776/Stranger-Things-Mongo-Quest/blob/main/docs/mongodb-questions-answers.md'
   },
   {
-    id: 's7',
-    subject: 'Deployments',
+    id: 's6',
+    subject: 'Deployment Guide',
     contentType: 'link',
-    tags: ['Concepts'],
+    tags: ['Guide'],
     content: 'https://github.com/dikshakewat3776/ship-your-stack'
   }
 ]

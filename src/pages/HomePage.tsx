@@ -31,12 +31,12 @@ export const HomePage = () => {
         </aside>
         <div className="hero-orb" aria-hidden="true" />
       </article>
-      <article className="card section-muted">
+      {/* <article className="card section-muted"> */}
         {/* <p>
           Animation source now runs from the curated jutsu library only. Theme switching loads a module from
           `src/animations` and removes old CSS-based pulses.
         </p> */}
-      </article>
+      {/* </article> */}
     </section>
   )
 }
