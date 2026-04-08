@@ -1,6 +1,6 @@
 # Hidden Jutsu Portfolio 
 
-Static React + Vite + TypeScript portfolio designed for GitHub Pages (`github.io`) with **no backend, no auth server, and no API calls**.
+Frontend-only portfolio built with React, Vite, and TypeScript, optimized for GitHub Pages (`github.io`) with **zero backend dependencies, no auth server, and no external API calls**.
 
 ## Local Setup
 
