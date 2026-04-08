@@ -9,7 +9,7 @@ export const ProjectsPage = () => {
         {projects.map((project) => (
           <article key={project.id} className="card project-card">
             <h2>{project.title}</h2>
-            <p>{project.description}</p>
+            <p className="project-description">{project.description}</p>
             <div className="chips">
               {project.stack.map((tech) => (
                 <span key={tech} className="chip">
@@ -17,10 +17,10 @@ export const ProjectsPage = () => {
                 </span>
               ))}
             </div>
-            <a href={project.githubUrl} target="_blank" rel="noreferrer" className="btn project-link">
-              GitHub: {project.githubUrl}
-            </a>
-            <div className="row">
+            <div className="row project-actions">
+              <a href={project.githubUrl} target="_blank" rel="noreferrer" className="btn project-link-btn">
+                View GitHub
+              </a>
               {project.liveUrl ? (
                 <a href={project.liveUrl} target="_blank" rel="noreferrer" className="btn">
                   Live
