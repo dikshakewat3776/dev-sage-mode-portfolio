@@ -7,7 +7,7 @@ export const Navbar = () => {
     <header className="navbar-shell">
       <nav className="navbar" aria-label="Primary">
         <NavLink to="/" className="brand">
-          Hidden Jutsu
+          Diksha Kewat
         </NavLink>
         <div className="nav-links">
           <NavLink to="/projects">Projects</NavLink>
