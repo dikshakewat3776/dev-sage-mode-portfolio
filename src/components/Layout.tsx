@@ -12,7 +12,7 @@ export const Layout = ({ children }: { children: ReactNode }) => {
   }, [themeMode])
 
   useEffect(() => {
-    applyJutsuTheme('chakra_pulse')
+    applyJutsuTheme('fireball')
     return () => {
       destroyActiveJutsuTheme()
     }

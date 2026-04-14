@@ -55,7 +55,18 @@ export const HomePage = () => {
             ))}
           </div>
         </aside>
-        <div className="hero-orb" aria-hidden="true" />
+        <article className="card hero-resume">
+          <h2>Resume</h2>
+          <p>Want the full background in one place?</p>
+          <a
+            href="https://github.com/dikshakewat3776/dev-sage-mode-portfolio/blob/main/Resume_2025.pdf"
+            target="_blank"
+            rel="noreferrer"
+            className="btn primary"
+          >
+            Check out resume
+          </a>
+        </article>
       </article>
       {/* <article className="card section-muted"> */}
         {/* <p>
