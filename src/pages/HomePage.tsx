@@ -44,6 +44,18 @@ export const HomePage = () => {
             ))}
           </div>
         </article>
+        <article className="card hero-resume">
+          <h2>Resume</h2>
+          <p>Want the full background in one place?</p>
+          <a
+            href="https://github.com/dikshakewat3776/dev-sage-mode-portfolio/blob/main/Resume_2025.pdf"
+            target="_blank"
+            rel="noreferrer"
+            className="btn primary"
+          >
+            Check out resume
+          </a>
+        </article>
         <div className="hero-side">
           <aside className="card hero-social">
             <h2>Find me online</h2>
@@ -56,18 +68,6 @@ export const HomePage = () => {
               ))}
             </div>
           </aside>
-          <article className="card hero-resume">
-            <h2>Resume</h2>
-            <p>Want the full background in one place?</p>
-            <a
-              href="https://github.com/dikshakewat3776/dev-sage-mode-portfolio/blob/main/Resume_2025.pdf"
-              target="_blank"
-              rel="noreferrer"
-              className="btn primary"
-            >
-              Check out resume
-            </a>
-          </article>
         </div>
       </article>
       {/* <article className="card section-muted"> */}

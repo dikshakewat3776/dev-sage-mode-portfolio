@@ -325,6 +325,7 @@ body[data-theme='light'] .bio-block li {
 }
 
 .hero-resume {
+  grid-column: 1 / 2;
   display: grid;
   gap: 0.7rem;
 }
@@ -400,6 +401,10 @@ body[data-theme='light'] .project-link-btn {
     grid-column: auto;
     justify-self: start;
     max-width: 100%;
+  }
+
+  .hero-resume {
+    grid-column: auto;
   }
 
 }
