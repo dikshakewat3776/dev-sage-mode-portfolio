@@ -253,6 +253,16 @@ body[data-theme='light'] .hero-intro {
   grid-column: 1 / 2;
 }
 
+.hero-side {
+  grid-column: 2 / 3;
+  align-self: start;
+  justify-self: end;
+  width: 100%;
+  max-width: 420px;
+  display: grid;
+  gap: 1rem;
+}
+
 .hero-about h2,
 .hero-social h2 {
   margin: 0 0 0.75rem;
@@ -295,19 +305,26 @@ body[data-theme='light'] .bio-block li {
 }
 
 .hero-social {
-  align-self: start;
-  max-width: 420px;
-  justify-self: end;
-  position: sticky;
-  top: 90px;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.hero-social p {
+  margin: 0;
+}
+
+.hero-social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.hero-social-links .btn {
+  width: 100%;
+  text-align: left;
 }
 
 .hero-resume {
-  grid-column: 2 / 3;
-  align-self: start;
-  justify-self: end;
-  width: 100%;
-  max-width: 420px;
   display: grid;
   gap: 0.7rem;
 }
@@ -379,13 +396,7 @@ body[data-theme='light'] .project-link-btn {
     grid-column: auto;
   }
 
-  .hero-social {
-    justify-self: start;
-    max-width: 100%;
-    position: static;
-  }
-
-  .hero-resume {
+  .hero-side {
     grid-column: auto;
     justify-self: start;
     max-width: 100%;

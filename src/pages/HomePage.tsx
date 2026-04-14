@@ -44,29 +44,31 @@ export const HomePage = () => {
             ))}
           </div>
         </article>
-        <aside className="card hero-social">
-          <h2>Find me online</h2>
-          <p>Follow my latest builds, writeups, and experiments.</p>
-          <div className="stack">
-            {profile.socialLinks.map((link) => (
-              <a key={link.label} href={link.href} target="_blank" rel="noreferrer" className="btn">
-                {link.label}
-              </a>
-            ))}
-          </div>
-        </aside>
-        <article className="card hero-resume">
-          <h2>Resume</h2>
-          <p>Want the full background in one place?</p>
-          <a
-            href="https://github.com/dikshakewat3776/dev-sage-mode-portfolio/blob/main/Resume_2025.pdf"
-            target="_blank"
-            rel="noreferrer"
-            className="btn primary"
-          >
-            Check out resume
-          </a>
-        </article>
+        <div className="hero-side">
+          <aside className="card hero-social">
+            <h2>Find me online</h2>
+            <p>Follow my latest builds, writeups, and experiments.</p>
+            <div className="hero-social-links">
+              {profile.socialLinks.map((link) => (
+                <a key={link.label} href={link.href} target="_blank" rel="noreferrer" className="btn">
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          </aside>
+          <article className="card hero-resume">
+            <h2>Resume</h2>
+            <p>Want the full background in one place?</p>
+            <a
+              href="https://github.com/dikshakewat3776/dev-sage-mode-portfolio/blob/main/Resume_2025.pdf"
+              target="_blank"
+              rel="noreferrer"
+              className="btn primary"
+            >
+              Check out resume
+            </a>
+          </article>
+        </div>
       </article>
       {/* <article className="card section-muted"> */}
         {/* <p>
