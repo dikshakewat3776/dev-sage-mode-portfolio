@@ -226,26 +226,80 @@ blockquote {
 .hero-grid {
   position: relative;
   display: grid;
-  gap: 1.2rem;
-  grid-template-columns: 1.25fr 1fr;
+  gap: 1.4rem;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
   padding: 1rem 0;
 }
 
 .hero-copy h1 {
-  font-size: clamp(2.2rem, 5vw, 4.1rem);
-  line-height: 0.95;
-  margin: 0.4rem 0 0.8rem;
-  max-width: 14ch;
+  font-size: clamp(2rem, 4vw, 3.35rem);
+  line-height: 1.03;
+  margin: 0.45rem 0 1rem;
+  max-width: 12ch;
 }
 
-.hero-copy p {
-  max-width: 70ch;
+.hero-intro {
+  margin: 0 0 1rem;
+  max-width: 62ch;
+  color: rgba(244, 236, 223, 0.9);
+  font-size: 1.05rem;
+}
+
+body[data-theme='light'] .hero-intro {
+  color: rgba(46, 38, 23, 0.9);
+}
+
+.hero-about {
+  grid-column: 1 / 2;
+}
+
+.hero-about h2,
+.hero-social h2 {
+  margin: 0 0 0.75rem;
+}
+
+.bio-sections {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.bio-block {
+  border: 1px solid rgba(255, 175, 72, 0.18);
+  border-radius: 0.8rem;
+  padding: 0.8rem 0.9rem;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+body[data-theme='light'] .bio-block {
+  background: rgba(46, 38, 23, 0.03);
+}
+
+.bio-block h3 {
+  margin: 0 0 0.45rem;
+  font-size: 0.95rem;
+}
+
+.bio-block ul {
+  margin: 0;
+  padding-left: 1rem;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.bio-block li {
+  color: rgba(244, 236, 223, 0.9);
+}
+
+body[data-theme='light'] .bio-block li {
+  color: rgba(46, 38, 23, 0.9);
 }
 
 .hero-social {
   align-self: start;
   max-width: 420px;
   justify-self: end;
+  position: sticky;
+  top: 90px;
 }
 
 .hero-orb {
@@ -320,9 +374,14 @@ body[data-theme='light'] .project-link-btn {
     grid-template-columns: 1fr;
   }
 
+  .hero-about {
+    grid-column: auto;
+  }
+
   .hero-social {
     justify-self: start;
     max-width: 100%;
+    position: static;
   }
 
   .hero-orb {

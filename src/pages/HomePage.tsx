@@ -2,13 +2,24 @@ import { Link } from 'react-router-dom'
 import { profile } from '../data/profile'
 
 export const HomePage = () => {
+  const bioSections = profile.bio
+    .split('\n\n')
+    .map((section) => section.trim())
+    .filter(Boolean)
+    .map((section) => {
+      const lines = section.split('\n').map((line) => line.trim())
+      const heading = lines[0]
+      const points = lines.slice(1).map((line) => line.replace(/^- /, '')).filter(Boolean)
+      return { heading, points }
+    })
+
   return (
     <section className="stack home-screen">
       <article className="hero-grid">
         <div className="hero-copy">
           <p className="eyebrow">Data-driven chakra UI</p>
           <h1>{profile.tagline}</h1>
-          <p>{profile.bio}</p>
+          <p className="hero-intro">Backend-focused builder who likes clean systems, practical debugging, and shipping useful products.</p>
           <div className="row">
             <Link to="/projects" className="btn primary">
               View projects
@@ -18,6 +29,21 @@ export const HomePage = () => {
             </Link>
           </div>
         </div>
+        <article className="card hero-about">
+          <h2>About me</h2>
+          <div className="bio-sections">
+            {bioSections.map((section) => (
+              <section key={section.heading} className="bio-block">
+                <h3>{section.heading}</h3>
+                <ul>
+                  {section.points.map((point) => (
+                    <li key={point}>{point}</li>
+                  ))}
+                </ul>
+              </section>
+            ))}
+          </div>
+        </article>
         <aside className="card hero-social">
           <h2>Find me online</h2>
           <p>Follow my latest builds, writeups, and experiments.</p>
