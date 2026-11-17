@@ -1,0 +1,37 @@
+scripts/generate_cover_letter.py
+  s_1ba519527205b9::t_a9e5b9ea93a994 29
+  s_1ba519527205b9::t_7af9bb6fbb6348 1,3-13,17,22,27,31,34-46,52-54,71,74,76,78,80,86,88-96
+  s_1ba519527205b9::t_40d23296b49fbb 15-16,18-21,23-26,28,30,32-33,47-48,57-60,62-68,72,75,81
+  s_1ba519527205b9::t_22e6aec135f0b7 14
+  s_1ba519527205b9::t_2adb60cd69efe9 2,49-51,55-56,61,69-70,73,77,79,82-85,87
+src/components/sections/ContactSection.tsx
+  s_1ba519527205b9::t_157a61bf39bd0a 36-41
+src/data/profile.ts
+  s_1ba519527205b9::t_3022ebd889f1c6 42
+src/types/content.ts
+  s_1ba519527205b9::t_cb1dff7ba6f025 26
+README.md
+  s_1ba519527205b9::t_9d703c8f04bf04 29-31
+src/components/sections/HeroSection.tsx
+  s_1ba519527205b9::t_a42d74820da828 84-95
+content/cover-letter.md
+  s_1ba519527205b9::t_0aa2df0f86fe1f 2,4-5,7-9,12-13,15,17,19,21,23-24
+  s_1ba519527205b9::t_acb5b81ec45d80 10-11
+  s_1ba519527205b9::t_fedd1b8c8a7678 1,3,6,14,16,18,20,22,25-29
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "4297ed5e79455e6f6c24000a149431cfb8dc8238",
+  "prompts": {},
+  "sessions": {
+    "s_1ba519527205b9": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "1e5e4096-a3d7-463f-9696-fdf968cba7ae",
+        "model": "composer-2.5"
+      },
+      "human_author": "diksha.kewat <diksha.kewat@spicemoney.com>"
+    }
+  }
+}
