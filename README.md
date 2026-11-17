@@ -26,8 +26,9 @@ Shared types: `src/types/content.ts`.
 
 ### Assets to add
 
-1. **Resume** — place `public/resume.pdf`, then uncomment `resumeUrl` in `profile.ts`.
-2. **Photo** — place `public/profile.jpg`, then uncomment `photoUrl` in `profile.ts`.
+1. **Resume** — place `public/resume.pdf` (linked via `resumeUrl` in `profile.ts`).
+2. **Cover letter** — edit `content/cover-letter.md` and run `python3 scripts/generate_cover_letter.py` → `public/cover-letter.pdf`.
+3. **Photo** — place `public/profile.jpg` (linked via `photoUrl` in `profile.ts`).
 3. **Work projects** — replace `[Add …]` placeholders in `projects.ts` and `experience.ts` with your specifics (no fabricated metrics).
 
 ## Build & preview

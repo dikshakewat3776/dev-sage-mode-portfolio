@@ -81,6 +81,18 @@ export const HeroSection = () => {
                 Resume (add PDF)
               </span>
             )}
+            {profile.coverLetterUrl ? (
+              <a
+                href={profile.coverLetterUrl}
+                className="btn btn-secondary"
+                download
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FiDownload aria-hidden />
+                Cover letter
+              </a>
+            ) : null}
             <button type="button" className="btn btn-secondary" onClick={() => scrollTo('projects')}>
               Explore projects
             </button>

@@ -39,6 +39,7 @@ export const profile: Profile = {
     { label: 'Email', href: 'mailto:dikshakewat3776@gmail.com' },
   ],
   resumeUrl: `${import.meta.env.BASE_URL}resume.pdf`,
+  coverLetterUrl: `${import.meta.env.BASE_URL}cover-letter.pdf`,
   photoUrl: `${import.meta.env.BASE_URL}profile.jpg`,
   contactClosing:
     'Open to conversations about engineering leadership, fintech and credit platforms, platform reliability, and governed enterprise AI.',

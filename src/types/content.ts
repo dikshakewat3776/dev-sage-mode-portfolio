@@ -23,6 +23,7 @@ export interface Profile {
   aboutFocusAreas?: string[]
   socialLinks: SocialLink[]
   resumeUrl?: string
+  coverLetterUrl?: string
   photoUrl?: string
   email: string
   contactClosing: string

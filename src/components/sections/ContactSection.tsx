@@ -33,6 +33,12 @@ export const ContactSection = () => {
               Download resume
             </a>
           ) : null}
+          {profile.coverLetterUrl ? (
+            <a href={profile.coverLetterUrl} className="contact-link" download>
+              <FiDownload aria-hidden />
+              Download cover letter
+            </a>
+          ) : null}
         </div>
       </div>
     </section>
