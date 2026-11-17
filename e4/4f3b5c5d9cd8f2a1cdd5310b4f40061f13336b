@@ -1,0 +1,16 @@
+assets/index-71730d6c.js
+  h_b895553bd3d7d7 75
+index.html
+  h_b895553bd3d7d7 19
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "e44f3b5c5d9cd8f2a1cdd5310b4f40061f13336b",
+  "prompts": {},
+  "humans": {
+    "h_b895553bd3d7d7": {
+      "author": "diksha.kewat <diksha.kewat@spicemoney.com>"
+    }
+  }
+}
