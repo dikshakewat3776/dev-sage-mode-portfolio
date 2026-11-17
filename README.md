@@ -1,69 +1,53 @@
-# Hidden Jutsu Portfolio 
+# Diksha Kewat — Engineering Portfolio
 
-Frontend-only portfolio built with React, Vite, and TypeScript, optimized for GitHub Pages (`github.io`) 
+Premium, responsive single-page portfolio (React, Vite, TypeScript) optimized for GitHub Pages.
 
-## Local Setup
+## Local setup
 
 ```bash
 npm install
 npm run dev
 ```
 
-## Where To Edit Portfolio Content
+## Edit content
 
-All editable content is local typed data in `src/data`:
+Typed data lives in `src/data/`:
 
-- `src/data/profile.ts`
-- `src/data/projects.ts`
-- `src/data/study.ts`
-- `src/data/bookshelf.ts`
-- `src/data/skills.ts`
+| File | Purpose |
+|------|---------|
+| `profile.ts` | Name, intro, about, social links, resume & photo URLs |
+| `experience.ts` | Career timeline (update employment dates) |
+| `projects.ts` | Featured work cards & categories |
+| `skills.ts` | Technical expertise groups |
+| `philosophy.ts` | Leadership principles |
+| `study.ts` | Optional study vault (`/#/study`) |
 
-Shared types live in `src/types/content.ts`.
+Shared types: `src/types/content.ts`.
 
-## Build + Preview
+### Assets to add
+
+1. **Resume** — place `public/resume.pdf`, then uncomment `resumeUrl` in `profile.ts`.
+2. **Photo** — place `public/profile.jpg`, then uncomment `photoUrl` in `profile.ts`.
+3. **Work projects** — replace `[Add …]` placeholders in `projects.ts` and `experience.ts` with your specifics (no fabricated metrics).
+
+## Build & preview
 
 ```bash
 npm run build
 npm run preview
 ```
 
-## Documentation
+## Deploy (GitHub Pages)
 
-- TypeScript interview Q&A + project concepts:
-  - `docs/typescript-interview-questions-and-concepts.md`
-
-## GitHub Pages Deploy (Repo Subpath)
-
-This app uses:
-- `HashRouter` for SPA route compatibility on GitHub Pages
-- Vite `base` set to `'/dev-sage-mode-portfolio/'` in production
-- `gh-pages` deploy script
-
-### Steps
-
-1. Push this folder as its own GitHub repo (recommended name: `dev-sage-mode-portfolio`).
-2. Ensure `vite.config.ts` base matches your repo name:
-   - `'/<repo-name>/'`
-3. Deploy:
+Production base path: `/dev-sage-mode-portfolio/` in `vite.config.ts`.
 
 ```bash
 npm run deploy
 ```
 
-4. In GitHub repo settings:
-   - **Pages** -> **Build and deployment**
-   - Source: `Deploy from a branch`
-   - Branch: `gh-pages` / root
-5. App URL will be:
-   - `https://<username>.github.io/<repo-name>/`
+## Stack
 
-## Troubleshooting
-
-- Blank page after deploy:
-  - Verify `vite.config.ts` production `base` matches repository name exactly.
-- Routes failing on refresh:
-  - Keep `HashRouter` (already configured) for GitHub Pages.
-- Static assets not loading:
-  - Rebuild and redeploy after correcting base path.
-
+- React 18, TypeScript, Vite
+- React Router (HashRouter for GitHub Pages)
+- Framer Motion (subtle section & headline motion)
+- react-icons

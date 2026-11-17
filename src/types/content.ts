@@ -1,19 +1,10 @@
-export type ThemeMode = 'dark' | 'light'
-export type StudySubject = string
-export type StudyContentType = 'markdown' | 'text' | 'link'
-export type AnimationType =
-  | 'amaterasu'
-  | 'chakra_pulse'
-  | 'chidori'
-  | 'crystal_style'
-  | 'fireball'
-  | 'mokuton'
-  | 'rasengan'
-  | 'rinnegan'
-  | 'shadow_clone'
-  | 'sharingan'
-  | 'summoning_jutsu'
-  | 'susanoo'
+export type ProjectCategory =
+  | 'all'
+  | 'marketplace'
+  | 'platform'
+  | 'underwriting'
+  | 'ai'
+  | 'observability'
 
 export interface SocialLink {
   label: string
@@ -22,20 +13,63 @@ export interface SocialLink {
 
 export interface Profile {
   name: string
-  tagline: string
-  bio: string
+  title: string
+  /** Shown under the name in the hero */
+  roleLine: string
+  headlinePhrases: string[]
+  intro: string
+  about: string[]
+  /** Optional emphasis labels rendered as chips below the about narrative */
+  aboutFocusAreas?: string[]
   socialLinks: SocialLink[]
+  resumeUrl?: string
+  photoUrl?: string
+  email: string
+  contactClosing: string
+}
+
+export interface ExperienceRole {
+  id: string
+  company: string
+  role: string
+  period: string
+  summary: string
+  highlights: string[]
+  technologies?: string[]
 }
 
 export interface Project {
   id: string
   title: string
-  description: string
+  category: Exclude<ProjectCategory, 'all'>
+  problem: string
+  solution: string
+  contribution: string
+  architecture?: string[]
   stack: string[]
-  githubUrl: string
+  impact?: string
+  githubUrl?: string
   liveUrl?: string
-  animationType: AnimationType
+  internal?: boolean
 }
+
+export interface SkillGroup {
+  title: string
+  items: string[]
+}
+
+export interface PhilosophyPoint {
+  title: string
+  description: string
+}
+
+export interface RecognitionHighlight {
+  value: string
+  label: string
+}
+
+export type StudySubject = string
+export type StudyContentType = 'markdown' | 'text' | 'link'
 
 export interface StudyEntry {
   id: string
@@ -45,4 +79,3 @@ export interface StudyEntry {
   content: string
   tags: string[]
 }
-

@@ -1,70 +1,35 @@
-import { Link } from 'react-router-dom'
-import { profile } from '../data/profile'
+import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
+import { AboutSection } from '../components/sections/AboutSection'
+import { ContactSection } from '../components/sections/ContactSection'
+import { ExperienceSection } from '../components/sections/ExperienceSection'
+import { HeroSection } from '../components/sections/HeroSection'
+import { PhilosophySection } from '../components/sections/PhilosophySection'
+import { ProjectsSection } from '../components/sections/ProjectsSection'
+import { SkillsSection } from '../components/sections/SkillsSection'
+import type { SectionId } from '../hooks/useActiveSection'
 
 export const HomePage = () => {
-  const bioSections = profile.bio
-    .split('\n\n')
-    .map((section) => section.trim())
-    .filter(Boolean)
-    .map((section) => {
-      const lines = section.split('\n').map((line) => line.trim())
-      const heading = lines[0]
-      const points = lines.slice(1).map((line) => line.replace(/^- /, '')).filter(Boolean)
-      return { heading, points }
-    })
+  const location = useLocation()
+
+  useEffect(() => {
+    const target = (location.state as { scrollTo?: SectionId } | null)?.scrollTo
+    if (!target) return
+    const id = window.setTimeout(() => {
+      document.getElementById(target)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }, 80)
+    return () => window.clearTimeout(id)
+  }, [location.state])
 
   return (
-    <section className="stack home-screen">
-      <article className="hero-grid">
-        <div className="hero-copy">
-          <p className="eyebrow">Data-driven chakra UI</p>
-          <h1>{profile.tagline}</h1>
-          <p className="hero-intro">Backend-focused builder who likes clean systems, practical debugging, and shipping useful products.</p>
-          <div className="row">
-            <Link to="/projects" className="btn primary">
-              View projects
-            </Link>
-            <Link to="/study" className="btn">
-              Open study vault
-            </Link>
-          </div>
-        </div>
-        <article className="card hero-about">
-          <h2>About me</h2>
-          <div className="bio-sections">
-            {bioSections.map((section) => (
-              <section key={section.heading} className="bio-block">
-                <h3>{section.heading}</h3>
-                <ul>
-                  {section.points.map((point) => (
-                    <li key={point}>{point}</li>
-                  ))}
-                </ul>
-              </section>
-            ))}
-          </div>
-        </article>
-        <div className="hero-side">
-          <aside className="card hero-social">
-            <h2>Find me online</h2>
-            <p>Follow my latest builds, writeups, and experiments.</p>
-            <div className="hero-social-links">
-              {profile.socialLinks.map((link) => (
-                <a key={link.label} href={link.href} target="_blank" rel="noreferrer" className="btn">
-                  {link.label}
-                </a>
-              ))}
-            </div>
-          </aside>
-        </div>
-      </article>
-      {/* <article className="card section-muted"> */}
-        {/* <p>
-          Animation source now runs from the curated jutsu library only. Theme switching loads a module from
-          `src/animations` and removes old CSS-based pulses.
-        </p> */}
-      {/* </article> */}
-    </section>
+    <div className="home-page">
+      <HeroSection />
+      <AboutSection />
+      <ExperienceSection />
+      <ProjectsSection />
+      <SkillsSection />
+      <PhilosophySection />
+      <ContactSection />
+    </div>
   )
 }
-

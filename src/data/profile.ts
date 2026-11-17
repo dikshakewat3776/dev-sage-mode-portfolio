@@ -2,33 +2,44 @@ import type { Profile } from '../types/content'
 
 export const profile: Profile = {
   name: 'Diksha Kewat',
-  tagline: 'Currently a Senior Debugger of Things That Make No Sense.',
-  bio: `Tell me about yourself
-- Naruto taught me to start with chaos, make questionable decisions, and now build scalable systems through persistence and ramen.
-
-What are your strengths?
-- Kakashi Hatake energy helps me handle almost anything: new tech, legacy code, and bugs that should not exist.
-- I stay calm while internally debugging 17 things at once.
-
-What is your biggest weakness?
-- With Sasuke Uchiha energy, I do not just fix bugs; I investigate their backstory, origin, and emotional trauma.
-- Great for code quality, not always great for deadlines.
-
-What have you done to improve your knowledge?
-- Like Jiraiya, I believe in research: building things, breaking them, and learning from mistakes.
-- I keep exploring backend systems, machine learning, and anything that makes me ask, "How does this even work?"
-
-What motivates you?
-- Shikamaru-level efficiency: do it smart, not hard.
-- Clean architecture. Systems that do not crash.
-- Cats. Mostly cats.
-
-Bonus: How do you handle pressure?
-- Like a true ninja: panic internally, fix the issue externally, and pretend it was always the plan.`,
+  title: 'Engineering Manager',
+  roleLine: 'Engineering Manager · Fintech & Credit Platforms · Distributed Systems · Enterprise AI',
+  headlinePhrases: [
+    'Engineering Leadership',
+    'Fintech & Credit Stacks',
+    'Marketplace Architecture',
+    'Underwriting & Risk Engines',
+    'Enterprise AI Governance',
+  ],
+  intro:
+    'I build and lead engineering teams that turn complex financial technology problems into scalable, reliable products. My experience spans digital lending ecosystems, multi-lender marketplaces, automated underwriting stacks, and governed enterprise AI platforms.',
+  about: [
+    'I’ve grown from full-stack lending engineering to leading fintech marketplace modernization, credit platforms, and governed enterprise AI initiatives.',
+    'My journey has been shaped by building consumer and partner lending journeys, evolving into larger platform architecture and engineering leadership responsibilities where scalability, credit risk, compliance, and reliability are as important as clean code.',
+    'At **Spice Money**, I lead the modernization of the **Credit platform**, spanning a new marketplace stack — Loan Center 2.0, Vyapaar Loan, Personal Loan, Digital Dukaan, and Gold Loan — alongside a Unified Integration Layer (UIL) connecting 23+ lending partners, the Backstage vendor API gateway, underwriting engines, and LOS/LMS operations portals.',
+    'A key focus of my work is pragmatic modernization: evolving legacy Express and JavaScript services toward **Python, FastAPI, Nodejs, NestJS and TypeScript**, introducing stronger dependency injection and compile-time contract safety while maintaining product delivery momentum.',
+    'I work closely with Product, Risk & Credit, Data Science, Operations, and Business teams to translate complex requirements into scalable engineering solutions. I work with **bureau and banking integrations and aggregators** across credit and onboarding journeys. I also focus on production observability through **SigNoz APM** and building governed, compliance-aware AI capabilities using **LiteLLM and Langfuse**.',
+    'Previously, at **Aditya Birla Finance**, I built digital and partner lending capabilities across LOS/LMS systems. That experience continues to shape how I approach credit platforms, financial integrations, and end-to-end lending architecture.',
+  ],
+  aboutFocusAreas: [
+    'Engineering Leadership',
+    'Fintech Platforms',
+    'Digital Lending',
+    'Backend Architecture',
+    'Distributed Systems',
+    'Bureau & Banking Integrations',
+    'Credit & Underwriting Systems',
+    'Enterprise AI',
+    'LLM Infrastructure',
+  ],
+  email: 'dikshakewat3776@gmail.com',
   socialLinks: [
-    { label: 'GitHub', href: 'https://github.com/dikshakewat3776' },
     { label: 'LinkedIn', href: 'https://www.linkedin.com/in/diksha-kewat-3356a516b' },
+    { label: 'GitHub', href: 'https://github.com/dikshakewat3776' },
     { label: 'Email', href: 'mailto:dikshakewat3776@gmail.com' },
   ],
+  resumeUrl: `${import.meta.env.BASE_URL}resume.pdf`,
+  photoUrl: `${import.meta.env.BASE_URL}profile.jpg`,
+  contactClosing:
+    'Open to conversations about engineering leadership, fintech and credit platforms, platform reliability, and governed enterprise AI.',
 }
-
